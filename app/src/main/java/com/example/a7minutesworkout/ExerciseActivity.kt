@@ -161,7 +161,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private fun setExerciseProgressBar(){
         binding?.progressBarExercise?.progress = exerciseProgress
 
-        exerciseTimer = object: CountDownTimer(exerciseTimerDuration*1,1){
+        exerciseTimer = object: CountDownTimer(exerciseTimerDuration*1000,1000){
             override fun onTick(p0: Long) {
                 exerciseProgress++
                 binding?.progressBarExercise?.progress = 30-exerciseProgress
